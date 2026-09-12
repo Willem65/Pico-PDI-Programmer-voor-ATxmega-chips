@@ -41,7 +41,7 @@ Dit project implementeert **twee lagen**:
 
 ## Bedrading
 
-![Bedradingsschema](bedradingsschema.svg)
+![Bedradingsschema](kicad-picoprogrammer.pdf)
 
 | Pico-pin | Functie | Aangesloten op |
 |---|---|---|
