@@ -145,7 +145,6 @@ sudo avrdude -c jtag2pdi -p atxmega128a4u -P /dev/ttyACM0 -b 19200 -U lock:r:loc
 | Probleem | Mogelijke oorzaak |
 |---|---|
 | `timeout/error communicating with programmer` | PDI-klok te traag; verhoog de snelheid via `HALF_PERIOD_US`, of controleer de bedrading op wankele verbindingen |
-| Windows: `unable to write: sorry no info avail` | Ontbrekende/onvolledige USB-driver — controleer Apparaatbeheer |
 | `verification mismatch` bij schrijven | Controleer of het juiste geheugentype (`mtype`) correct wordt vertaald naar het PDI-adres in `translate_addr()` |
 | Signature komt niet overeen | Controleer de bedrading, met name de diode-richting en de pull-up-weerstand |
 
