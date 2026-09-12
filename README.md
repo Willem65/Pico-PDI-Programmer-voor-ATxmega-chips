@@ -28,8 +28,6 @@ Dit project implementeert **twee lagen**:
 ### Hardware
 - Een Raspberry Pi Pico (RP2040)
 - Een ATxmega-chip (getest met ATxmega128A4U)
-- Een diode (bijv. 1N4148)
-- Een weerstand van 4,7kΩ
 - Breadboard en jumperdraadjes (of, voor betrouwbaarheid, een gesoldeerde opstelling — zie [Bekende beperkingen](#bekende-beperkingen))
 
 ### Software
@@ -52,12 +50,10 @@ Dit project implementeert **twee lagen**:
 | GP1 | Debug-UART RX | Optioneel, idem |
 | GND | Massa | Gedeelde GND met de XMEGA |
 
-**Diode- en pull-up-opstelling:**
-- De diode zit met de **kathode** op de gedeelde data-lijn (naar pin 34 van de XMEGA), en de **anode** aan de GP3-kant.
-- Een pull-up-weerstand van 4,7kΩ van de gedeelde data-lijn naar 3V3.
-- De XMEGA moet gevoed worden met een spanning tussen 1,6V en 3,6V (getest op 3,3V).
 
-**Debug-UART (optioneel, maar sterk aanbevolen tijdens het bouwen/debuggen):**
+- De XMEGA moet gevoed worden met een spanning  3,3V.
+
+**Debug-UART (optioneel, tijdens het bouwen/debuggen):**
 Een losse USB-naar-seriële-adapter (bijv. een CH340-module) aangesloten op GP0/GP1, op 115200 baud. Dit geeft gedetailleerde logging van elk JTAG-commando dat binnenkomt, zonder de avrdude-verbinding zelf te verstoren.
 
 ---
@@ -92,7 +88,7 @@ Een losse USB-naar-seriële-adapter (bijv. een CH340-module) aangesloten op GP0/
 of alleen avrdude vanaf de command prompt
 ...
 
-## Gebruik met avrdude alleen
+## Gebruik met avrdude alleen :
 
 ### Chip-signature uitlezen (goede eerste test)
 ```bash
@@ -156,10 +152,6 @@ sudo avrdude -c jtag2pdi -p atxmega128a4u -P /dev/ttyACM0 -b 19200 -U lock:r:loc
 Voor gedetailleerde foutopsporing: sluit een losse USB-naar-seriële-adapter aan op GP0 (TX)/GP1 (RX), 115200 baud, en bekijk de live debug-log terwijl avrdude draait.
 
 ---
-
-## Licentie
-
-*(Voeg hier je gewenste licentie toe, bijvoorbeeld MIT of GPL-3.0)*
 
 ## Dankwoord
 
