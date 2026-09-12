@@ -1,0 +1,21 @@
+# Build-uitvoer (CMake genereert dit opnieuw bij elke build)
+build/
+build*/
+
+# Pico SDK (hoort niet in deze repository; clone 'm apart en verwijs
+# ernaar via de PICO_SDK_PATH-omgevingsvariabele of pico_sdk_import.cmake)
+pico-sdk/
+
+# Editor/IDE-bestanden
+.vscode/
+.idea/
+*.swp
+
+# Besturingssysteem-bestanden
+.DS_Store
+Thumbs.db
+
+# Tijdelijke test-/dumpbestanden die tijdens ontwikkeling ontstaan
+*.bin
+*.hex
+*.log
