@@ -147,7 +147,7 @@ sudo avrdude -c jtag2pdi -p atxmega128a4u -P /dev/ttyACM0 -b 19200 -U lock:r:loc
 |---|---|
 | `timeout/error communicating with programmer` | PDI-klok te traag; verhoog de snelheid via `HALF_PERIOD_US`, of controleer de bedrading op wankele verbindingen |
 | `verification mismatch` bij schrijven | Controleer of het juiste geheugentype (`mtype`) correct wordt vertaald naar het PDI-adres in `translate_addr()` |
-| Signature komt niet overeen | Controleer de bedrading, met name de diode-richting en de pull-up-weerstand |
+| Signature komt niet overeen | Controleer de bedrading.|
 
 Voor gedetailleerde foutopsporing: sluit een losse USB-naar-seriële-adapter aan op GP0 (TX)/GP1 (RX), 115200 baud, en bekijk de live debug-log terwijl avrdude draait.
 
