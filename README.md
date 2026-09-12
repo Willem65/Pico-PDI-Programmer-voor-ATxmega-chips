@@ -87,7 +87,12 @@ Een losse USB-naar-seriële-adapter (bijv. een CH340-module) aangesloten op GP0/
 
 ---
 
-## Gebruik met avrdude
+## Gebruik met avrdude en avrdude_gui.py
+
+of alleen avrdude vanaf de command prompt
+...
+
+## Gebruik met avrdude alleen
 
 ### Chip-signature uitlezen (goede eerste test)
 ```bash
